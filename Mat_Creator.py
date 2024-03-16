@@ -33,6 +33,8 @@ class App(QDialog):
         self.lyt.addLayout(self.midlyt)
         self.lyt.addWidget(self.b)
 
+        self.setParent(hou.ui.mainQtWindow(), Qt.Window)
+
     def txtpath(self):
         self.folder = QFileDialog.getExistingDirectory(caption='Select a folder')
         self.l1.setText(self.folder)
